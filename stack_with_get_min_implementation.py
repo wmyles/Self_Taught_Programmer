@@ -12,11 +12,11 @@ class Stack:
     
     def push(self, item):
         self.items.append(item)
-        if self.min==[]:
-            self.min.append(item)
+        if self.min_values==[]:
+            self.min_values.append(item)
         else:
-            if item<self.min[len(self.min)-1]:
-                self.min.append(item)
+            if item<self.min_values[len(self.min_values)-1]:
+                self.min_values.append(item)
             else:
                 pass
             
@@ -24,7 +24,7 @@ class Stack:
         self.items.pop()
         
     def getMin(self):
-        return self.min[len(self.min)-1]
+        return self.min_values[len(self.min_values)-1]
     
     def size(self):
         return len(self.items)
